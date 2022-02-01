@@ -281,10 +281,10 @@ namespace Siccity.GLTFUtility {
 
 					mesh.RecalculateBounds();
 
-					// Blend shapes
-					for (int i = 0; i < blendShapes.Count; i++) {
+					// Blend shapes don't work (finding multiple meshes with the same blendshapes)
+					/*for (int i = 0; i < blendShapes.Count; i++) {
 						mesh.AddBlendShapeFrame(blendShapes[i].name, 1f, blendShapes[i].pos, blendShapes[i].norm, blendShapes[i].tan);
-					}
+					}*/
 
 					if (normals.Count == 0 && onlyTriangles)
 						mesh.RecalculateNormals();
